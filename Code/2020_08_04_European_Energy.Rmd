@@ -171,7 +171,7 @@ tern_plot <-
   
   # titles
   labs(title = "A transition to cleaner energy",
-       subtitle = "How Europe's largest producers are moving away from conventional energy",
+       subtitle = "How Europe's largest producers are moving away from conventional thermal",
        x = "Conventional\nthermal", xarrow = "", 
        y = "Renewable", yarrow = "",
        z = "Nuclear", zarrow = "\n\n\nVisualization by Sietske Speerstra • Data by Eurostat #TidyTuesday") + # caption doesn't work with ggtern, so I'll use this as the solution for now
@@ -214,6 +214,6 @@ tern_plot
 
 ```{r save}
 
-ggsave("2020_08_04_plot.png", width = 10, height = 10)
+ggsave("2020_08_04_European_Energy.png", width = 10, height = 10)
 
 ```
