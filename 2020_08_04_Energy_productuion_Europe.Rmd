@@ -25,7 +25,7 @@ library(tidyverse)
 library(ggtern)
 library(ggtext)
 
-set.seed(2)
+set.seed(2019)
 ```
 
 ```{r themes}
@@ -83,7 +83,7 @@ top_producers <-
   energy_tidy %>% 
   group_by(country_name) %>% 
   summarize(total_production_by_country_year = sum(total_production_by_country_year)) %>% 
-  top_n(n = 13, wt = total_production_by_country_year) %>% 
+  top_n(n = 15, wt = total_production_by_country_year) %>% 
   pull(country_name)
 
 energy_top_producers <- 
@@ -171,7 +171,7 @@ tern_plot <-
   
   # titles
   labs(title = "A transition to cleaner energy",
-       subtitle = "The direction of Europe's largest energy producers",
+       subtitle = "How Europe's largest producers are moving away from conventional energy",
        x = "Conventional\nthermal", xarrow = "", 
        y = "Renewable", yarrow = "",
        z = "Nuclear", zarrow = "\n\n\nVisualization by Sietske Speerstra • Data by Eurostat #TidyTuesday") + # caption doesn't work with ggtern, so I'll use this as the solution for now
